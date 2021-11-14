@@ -1,0 +1,83 @@
+$name_rubles_fontSize: 20px;
+$general_text_fontSize: 15px;
+$price_fontSize: 35px;
+$dark_font_color: #333333;
+$light_font_color: #666666;
+
+$shopping_cart_background: #4ed17b;
+
+
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url('Roboto/Roboto-Bold.ttf');
+}
+
+body {
+    margin: 0;
+}
+.boots {
+    display: flex;
+    justify-content: center;
+}
+
+.boots__card {
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto Regular';
+    margin: 10px;
+
+    &__content {
+        margin: 30px 25px 0px 25px;
+
+        &_name {
+            color: $dark_font_color;
+            font-size: $name_rubles_fontSize;
+            font-family: 'Roboto Bold';
+        }
+
+        &_description {
+            margin-top: 5px;
+            color: $light_font_color;
+            font-size: $general_text_fontSize;
+        }
+    }
+
+    &__footer {
+        margin: 20px 25px 25px 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_price {
+            font-size: $price_fontSize;
+            color: $dark_font_color;
+            font-family: 'Roboto Bold';
+        }
+
+        &_price::after {
+            content: 'руб.';
+            font-size: $name_rubles_fontSize;
+            margin-left: 5px;
+            color: $dark_font_color;
+        }
+
+        &_shopping_cart {
+            background-color: $shopping_cart_background;
+            height: 40px;
+            width: 50px;
+            display: flex;
+            border-radius: 5px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
